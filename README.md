@@ -48,8 +48,6 @@ Native Memo is built using modern and reliable technologies:
 ---
 
 
----
-
 ### Contributing
 
 We welcome contributions from the community to make Native Memo even better! Here's how you can contribute:
