@@ -1,5 +1,3 @@
-# Python-related ignores
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -29,6 +27,8 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -55,17 +55,17 @@ cover/
 *.mo
 *.pot
 
-# Django stuff
+# Django stuff:
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
-# Flask stuff
+# Flask stuff:
 instance/
 .webassets-cache
 
-# Scrapy stuff
+# Scrapy stuff:
 .scrapy
 
 # Sphinx documentation
@@ -83,20 +83,33 @@ profile_default/
 ipython_config.py
 
 # pyenv
-.python-version
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
 
 # pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
 #Pipfile.lock
 
 # poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
 #poetry.lock
 
 # pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
-.pdm-python
-.pdm-build/
 
-# PEP 582
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
 # Celery stuff
@@ -140,77 +153,158 @@ dmypy.json
 cython_debug/
 
 # PyCharm
-.ruff_cache/
-
-# PyPI configuration file
-.pypirc
-
-# JavaScript/Node.js-related ignores
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be added to the global gitignore or merged into this project gitignore.  For PyCharm
+#  Community Edition, use 'PyCharm CE' instead of 'PyCharm'.
+.idea/
 
 # Logs
-logs/
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
-# Build outputs
-dist/
-build/
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
 
-# Temporary files
-*.tmp
-*.temp
+# TypeScript cache
+*.tsbuildinfo
 
-# IDE-specific files
-.vscode/
-.idea/
+# Optional npm cache directory
+.npm
 
-# Testing
-coverage/
-.nyc_output/
+# Optional eslint cache
+.eslintcache
 
-# Environment variables
-.env.local
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
 .env.development.local
 .env.test.local
 .env.production.local
+.env.local
 
-# Parcel-bundler cache
-.cache/
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
 
-# SvelteKit
-.svelte-kit/
-
-# Next.js
+# Next.js build output
 .next/
-
-# Nuxt.js
-.nuxt/
-
-# Vue.js
-*.vuepress/dist
-.vuepress/.temp
-
-# React Native
-.expo/
-web-build/
-
-# Storybook
 out/
+.vercel/
+.turbo/
 
-# Miscellaneous
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# public
+
+# vuepress build output
+.vuepress/dist
+
+# vuepress v2.x temp and cache directory
+.temp
+.cache
+
+# Docusaurus cache and generated files
+.docusaurus
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+
+# Testing coverage
+.nyc_output
+coverage/
+
+# Package manager lock files (you may want to commit these for reproducibility)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Temporary folders
+tmp/
+temp/
+
+# Editor backup files
+*~
 *.swp
 *.swo
-*.bak
-*.orig
-*.rej
-*.seed
-*.pid
-*.pid.lock
+
+# Project specific files
+config.env
+.env.local
+.env.production
+.env.development
